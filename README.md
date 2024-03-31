@@ -7,11 +7,11 @@ Early 2024 my friends and I discovered a bug (feature?) in groupMe. If you make 
 
 ### Ex. Person's name in GroupMe is the URL to Rick Astley’s “Never Gonna Give You Up” @ing him results in the Youtube URL Content preview.
 
-![Example @](./docs/overview-problem.jpeg)
+![Example @](./docs/overview-example.jpeg)
 
 ### I wanted to make it so that whenever someone @ me that this gif would show up
 
-![Gif](https://giphy.com/gifs/future-futurehive-hive-SBAToc4g0h89W)
+![Gif](./docs/overview-gif.PNG)
 
 ### However the URL was too long for GroupMe to allow it.
 
