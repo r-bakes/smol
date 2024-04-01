@@ -18,11 +18,11 @@ To get around this limitation, I developed a tinyURL service to create a small e
 
 
 ## GroupMe Defect Write Up & Solution Evidence
-### Ex. Person's name in GroupMe is the URL to Rick Astley’s “Never Gonna Give You Up” @ing him results in the Youtube URL Content preview.
+### Example. The name in GroupMe is the URL to Rick Astley’s “Never Gonna Give You Up”. Trying to @ him results in the Youtube URL Content preview.
 
 ![Example @](./docs/overview-example.jpeg)
 
-### I wanted to make it so that whenever someone @ me a gif hosted on giphy.com would show up. However the URL was too long for GroupMe to allow it.
+### I wanted to make it so that whenever someone trys to @ me a gif hosted on giphy.com would show up. However the URL was too long for GroupMe to allow it.
 
 ![Unable to Upload](./docs/overview-problem.PNG)
 
