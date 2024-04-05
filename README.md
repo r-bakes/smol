@@ -32,7 +32,7 @@ There appears to be a size limit for profile names however, so many of my friend
 
 ## Technical Stack
 
-**Feature :**
+**Features:**
 - Python 
 - [FastAPI](https://fastapi.tiangolo.com) - API Implementation
 
