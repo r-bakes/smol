@@ -3,14 +3,14 @@ import os
 import random
 import string
 
+from typing import Annotated
 from google.cloud import firestore
 from google.cloud.exceptions import Conflict
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Path
 from fastapi.responses import RedirectResponse, Response
 
 DATABASE = os.getenv("DATABASE") # Datastore Database
 COLLECTION = os.getenv("COLLECTION") # Datastore Database Collection (table)
-PORT = os.getenv("PORT") # Cloud Run port
 
 app = FastAPI()
 firebase_init = firebase_admin.initialize_app()
@@ -18,9 +18,8 @@ firebase_init = firebase_admin.initialize_app()
 db = firestore.Client(database=DATABASE)
 collection = db.collection(COLLECTION)
 
-
 @app.get("/{url_id}")
-def get_smol_url(url_id: str) -> Response:
+def get_smol_url(url_id: Annotated[str, Path(min_length=4, max_length=4, pattern="[a-zA-Z0-9]{4}")] ) -> RedirectResponse:
     """
     Retrieve the original URL for a given shortened URL identifier and redirect to it.
 
@@ -81,3 +80,4 @@ def create_url_id() -> str:
     return "".join(
         random.SystemRandom().choices(string.ascii_letters + string.digits, k=4)
     )
+
