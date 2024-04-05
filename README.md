@@ -8,7 +8,7 @@ A URL Shortener Service is a tool designed to convert long URLs into shorter, mo
 
 **A:** Early 2024 my friends and I discovered a bug (feature?) in groupMe. If you make your name a link then content preview is activated whenever someone trys to "@" you.
 
-To get around this limitation, I developed a tinyURL service to create a small enough URL such that it could be my profile name on GroupMe. The application is an API hosted on GCP cloud run built using FastAPI that sends a 302 redirect if the id of the url matches a record in a NoSQL database (Firestore). 
+There appears to be a size limit for profile names however, so many of my friends and my favorite links would not work. To get around this limitation, I developed a tinyURL service to create a small enough URL such that it could be my profile name on GroupMe. The application is an API hosted on GCP cloud run built using FastAPI that sends a 302 redirect if the id of the url matches a record in a NoSQL database (Firestore). 
 
 ### Key Features
 - **URL Shortening:** Convert a standard URL into a brief, unique link.
